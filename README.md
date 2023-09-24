@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+```
+# PromptVerse
+
+## Introduction
+
+PromptVerse is an open-source AI prompting tool that allows users to discover, create, and share creative prompts. It is built using Next.js and React, and uses Google Authentication for user authentication. The app is fully responsive and works on both desktop and mobile devices.
 
 ## Getting Started
 
-First, run the development server:
+To get started with PromptVerse, clone the repository and install the dependencies:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+git clone https://github.com/OmJadhav1/PromptVerse.git
+cd PromptVerse
+npm install
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Once the dependencies are installed, you can start the development server by running:
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The app will be available at http://localhost:3000.
 
-## Deploy on Vercel
+## Code Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The codebase is structured as follows:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* `app/`: Contains the main Next.js application code.
+* `components/`: Contains the React components used in the app.
+* `models/`: Contains the Mongoose models used for the database.
+* `pages/`: Contains the Next.js pages.
+* `utils/`: Contains utility functions used in the app.
+
+## Authentication
+
+PromptVerse uses Google Authentication for user authentication. To set up authentication, you will need to create a new Google OAuth client ID and secret. You can do this by following the instructions [here](https://developers.google.com/identity/sign-in/web/creating-client-ids-and-secrets).
+
+Once you have created your client ID and secret, you will need to add them to the `.env.local` file. The `.env.local` file is a local environment file that is used to store sensitive information, such as API keys and passwords.
+
+The following code shows how to add your Google OAuth client ID and secret to the `.env.local` file:
+
+```
+
+NEXT_PUBLIC_GOOGLE_CLIENT_ID=YOUR_CLIENT_ID
+NEXT_PUBLIC_GOOGLE_CLIENT_SECRET=YOUR_CLIENT_SECRET
+
+```
+
+## Database
+
+PromptVerse uses MongoDB for its database. To set up the database, you will need to create a new MongoDB database and user. You can do this by following the instructions [here](https://docs.mongodb.com/manual/tutorial/install-mongodb/).
+
+Once you have created your MongoDB database and user, you will need to add the database connection string to the `.env.local` file.
+```
