@@ -41,14 +41,16 @@ const Nav = () => {
             <button type="button" onClick={signOut} className="outline_btn">
               Sign Out
             </button>
-            <Image
-              src={session?.user.image}
-              width={37}
-              height={37}
-              priority={true}
-              className=" rounded-full"
-              alt="profile"
-            />
+            <Link href="/profile">
+              <Image
+                src={session?.user.image}
+                width={37}
+                height={37}
+                priority={true}
+                className=" rounded-full"
+                alt="profile"
+              />
+            </Link>
           </div>
         ) : (
           <>

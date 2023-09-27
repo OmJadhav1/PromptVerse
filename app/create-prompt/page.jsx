@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 import Form from "@components/Form";
+import AuthRouteGuard from "@components/AuthRouteGaurd";
 const CreatePrompt = () => {
   const router = useRouter();
   const { data: session } = useSession();
@@ -39,13 +40,15 @@ const CreatePrompt = () => {
   };
 
   return (
-    <Form
-      type="Create"
-      post={post}
-      setPost={setPost}
-      submitting={submitting}
-      handleSubmit={CreatePrompt}
-    />
+    <AuthRouteGuard>
+      <Form
+        type="Create"
+        post={post}
+        setPost={setPost}
+        submitting={submitting}
+        handleSubmit={CreatePrompt}
+      />
+    </AuthRouteGuard>
   );
 };
 
