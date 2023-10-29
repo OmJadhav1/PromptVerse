@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import Form from "@components/Form";
-import AuthRouteGuard from "@components/AuthRouteGaurd";
+import AuthRouteGuard from "@components/AuthRouteGuard";
 const UpdatePrompt = () => {
   const router = useRouter();
   const searchParams = useSearchParams();

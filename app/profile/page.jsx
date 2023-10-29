@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Profile from "@components/Profile";
-import AuthRouteGuard from "@components/AuthRouteGaurd";
+import AuthRouteGuard from "@components/AuthRouteGuard";
 const MyProfile = () => {
   const router = useRouter();
   const { data: session } = useSession();
